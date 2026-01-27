@@ -1,0 +1,12 @@
+
+.layout {
+  min-height: 100vh;  // prend toute la hauteur de l’écran
+  display: flex;
+  flex-direction: column;
+}
+
+.layout__content {
+  flex: 1;                 // prend tout l’espace disponible
+  display: flex;           // permet aux pages internes d’utiliser flex
+  flex-direction: column;
+}

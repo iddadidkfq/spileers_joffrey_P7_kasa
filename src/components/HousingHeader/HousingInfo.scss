@@ -1,0 +1,32 @@
+@import '../../styles/variables.scss';
+
+.housing-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; // espacement mobile-first
+}
+
+.housing-info__title {
+  color: $color-primary; // couleur Kasa
+  font-weight: normal;
+  font-size: 36px;
+  margin: 0;
+}
+
+.housing-info__location {
+  color: $color-primary; // couleur Kasa
+  font-size: 18px;
+  margin: 0;
+}
+
+.housing-info__tags {
+  display: flex;
+  flex-wrap: wrap; // permet plusieurs tags sur plusieurs lignes
+}
+
+/* ===== Desktop ===== */
+@media screen and (min-width: $desktop-min-wide) {
+  .housing-info {
+    gap: 15px; // un peu plus d'espacement sur desktop si besoin
+  }
+}

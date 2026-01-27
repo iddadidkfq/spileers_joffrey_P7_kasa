@@ -1,0 +1,14 @@
+@import '../../styles/variables.scss';
+
+.navig-liste {
+  display: flex;
+  gap: 20px;               // espacement mobile-first
+  align-items: center;
+}
+
+/* ===== Desktop ===== */
+@media screen and (min-width: $desktop-min-wide) {
+  .navig-liste {
+    gap: 40px;             // espacement plus large sur desktop
+  }
+}

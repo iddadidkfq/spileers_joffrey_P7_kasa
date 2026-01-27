@@ -1,0 +1,22 @@
+@import '../../styles/variables.scss';
+
+.host {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  &__name {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    font-size: 18px;
+    color: $color-primary; // utilisation de la variable globale
+  }
+
+  &__picture {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+}

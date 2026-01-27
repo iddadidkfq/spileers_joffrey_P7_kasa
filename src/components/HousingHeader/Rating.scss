@@ -1,0 +1,14 @@
+.rating {
+  display: flex;
+  gap: 5px;
+
+  &__star {
+    width: 20px;
+    height: 20px;
+    opacity: 0.3;
+  }
+
+  &__star--filled {
+    opacity: 1;
+  }
+}

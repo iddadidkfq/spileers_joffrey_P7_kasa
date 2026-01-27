@@ -1,0 +1,24 @@
+@import '../../styles/variables.scss';
+
+.tag {
+  display: inline-block;
+  background-color: $color-primary; // fond orangé centralisé
+  color: $color-white;               // texte blanc global
+  border-radius: 10px;
+  width: 115px;
+  height: 25px;
+  line-height: 25px;                 // texte centré verticalement
+  text-align: center;                // texte centré horizontalement
+  font-size: 12px;
+  margin: 5px 5px 0 0;               // espacement entre tags
+}
+
+/* ===== Desktop ===== */
+@media screen and (min-width: $desktop-min-wide) {
+  .tag {
+    font-size: 14px;                  // texte légèrement plus grand sur desktop
+    width: 130px;                     // un peu plus large sur desktop
+    height: 28px;
+    line-height: 28px;
+  }
+}

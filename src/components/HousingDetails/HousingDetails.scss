@@ -1,0 +1,26 @@
+@import '../../styles/variables.scss';
+
+.housing-details {  
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  padding-top: 20px; // mobile-first
+  box-sizing: border-box; // inclut padding dans la largeur
+}
+
+/* ===== Desktop ===== */
+@media screen and (min-width: $desktop-min-wide) {
+  .housing-details {
+    flex-direction: row;
+    gap: 40px;
+    padding-top: 40px;
+  }
+}
+
+/* ===== PROPS pour Collapse ===== */
+  .desktop-18 {
+    @media screen and (min-width: $desktop-min-wide) {
+      font-size:18px;
+    }
+  }

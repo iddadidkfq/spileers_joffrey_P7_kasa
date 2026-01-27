@@ -1,0 +1,51 @@
+@import '../../styles/variables.scss';
+
+.collapse {
+  width: 100%;
+  margin-bottom: 20px;
+
+  &__header {
+    background-color: $color-primary; // bandeau orangé
+    color: $color-white; // texte blanc
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0px 15px;
+    border-radius: 10px; // tu peux mettre $border-radius si défini dans variables
+    cursor: pointer;
+  }
+
+  &__title {
+    font-size: 13px;
+    font-weight: 500;
+  }
+
+  &__arrow {
+    font-size: 16px;
+    transition: transform 0.3s ease;
+
+    &--open {
+      transform: rotate(180deg); // flèche vers le haut
+    }
+  }
+
+  &__content {
+    background-color: $color-white; // fond blanc
+    color: $color-primary; // texte orangé
+
+    padding: 15px;
+    font-size: 12px;
+    line-height: 1.5;
+  }
+}
+
+/* ===== Desktop ===== */
+@media screen and (min-width: $desktop-min-wide) {
+  .collapse {
+    &__arrow {
+      font-size: 20px;
+    }
+  }
+}

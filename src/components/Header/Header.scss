@@ -1,0 +1,52 @@
+@import '../../styles/variables.scss';
+
+.header {
+  // Header pleine largeur
+  width: 100%;
+
+  // Flex pour aligner logo à gauche et nav à droite
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  // Padding général pour espacer logo et nav du bord de l'écran
+  padding: 20px;
+
+  // Pour que padding soit inclus dans la largeur totale
+  box-sizing: border-box;
+}
+
+.header__logo {
+  width: 145px; // mobile first
+}
+
+.header__nav {
+  display: flex;
+  gap: 20px; // espace entre les liens
+}
+
+.header__link {
+  font-size: 12px;
+  color: $color-primary; // utilise la variable globale
+  text-decoration: underline;
+}
+
+.header__link--active {
+  font-weight: 500;
+}
+
+/* ===== Desktop ===== */
+@media screen and (min-width: $desktop-min-wide) {
+  .header {
+    padding: 40px; // plus d'espace sur desktop
+  }
+
+  .header__logo {
+    width: 210px;
+  }
+
+  .header__link {
+    font-size: 24px;
+    cursor: pointer;
+  }
+}

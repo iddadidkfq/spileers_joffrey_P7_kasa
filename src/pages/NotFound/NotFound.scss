@@ -1,0 +1,58 @@
+/* ==========================================================================
+   NotFound.scss
+   Page 404 Kasa
+   Utilise _variables.scss pour couleurs et breakpoints
+   ========================================================================== */
+
+// Import des variables
+@import '../../styles/variables';
+
+.notfound {
+  flex:1; // prend tout l’espace disponible
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;// prend tout l’espace disponible
+
+  padding: 0 20px;
+
+  &__code {
+    font-size: 96px;
+    font-weight: 700;
+    color: $color-primary; // utilisation de la variable globale
+    margin-bottom: 10px;
+  }
+
+  &__text {
+    font-size: 18px;
+    color: $color-primary;
+    margin-bottom: 40px;
+  }
+
+  &__link {
+    font-size: 14px;
+    color: $color-primary;
+    text-decoration: underline;
+    margin-bottom: 20px;
+  }
+}
+
+/* ===== Desktop ===== */
+@media screen and (min-width: $desktop-min-wide) {
+  .notfound {
+    &__code {
+      font-size: 180px;
+      margin-bottom: 30px;
+    }
+
+    &__text {
+      font-size: 36px;
+      margin-bottom: 140px;
+    }
+
+    &__link {
+      font-size: 18px;
+      cursor: pointer;
+    }
+  }
+}

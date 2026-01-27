@@ -1,0 +1,14 @@
+@import '../../styles/variables.scss';
+
+.host-rating {
+  display: flex;
+  flex-direction: row-reverse; // mobile : host à droite, rating à gauche
+  justify-content: space-between;
+  gap: 20px; // espacement entre host et rating
+
+  @media screen and (min-width: $desktop-min-wide) {
+    flex-direction: column; // desktop : host au-dessus, rating dessous
+    align-items: flex-end;
+    margin-left: auto; // pousse le contenu à droite
+  }
+}

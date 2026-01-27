@@ -1,0 +1,26 @@
+/* ==========================================================================
+   Logement.scss
+   Page Logement Kasa
+   Utilise _variables.scss pour breakpoints et couleurs
+   ========================================================================== */
+
+// Import des variables
+@import '../../styles/variables';
+
+.logement-page {
+  width: 100%;
+  max-width: 100vw;        // jamais dépasser la largeur de l'écran
+  overflow-x: hidden;       // coupe tout débordement horizontal
+  box-sizing: border-box;   // padding inclus dans la largeur
+  padding: 0 20px;          // padding mobile-first
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ===== Desktop ===== */
+@media screen and (min-width: $desktop-min-wide) {
+  .logement-page {
+    padding: 40px;
+  }
+}

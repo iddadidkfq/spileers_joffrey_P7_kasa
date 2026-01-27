@@ -1,0 +1,63 @@
+/* ==========================================================================
+   About.scss
+   Page “À propos” Kasa
+   Utilise _variables.scss pour les couleurs et breakpoints
+   ========================================================================== */
+
+@import '../../styles/variables';
+
+.about {
+  width: 100%;
+  max-width: 100vw;        // jamais dépasser la largeur de l’écran
+  box-sizing: border-box;  // padding inclus dans la largeur
+  padding: 0 20px;         // mobile-first
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  /* ===== Bandeau haut de page ===== */
+  &__banner {
+    width: 100%;
+    height: 223px;
+    object-fit: cover;
+    border-radius: 25px; 
+    margin-bottom: 20px;
+  }
+
+  &__collapses {
+    display: flex;
+    flex-direction: column; // collapses empilés
+    gap: 20px;
+    width: 100%;             // réduit à 90% de la largeur
+
+    > * {
+      width: 100%;          // chaque Collapse prend toute la largeur du parent
+    }
+  }
+}
+
+
+/* ===== Desktop ===== */
+@media screen and (min-width: $desktop-min-wide) {
+  .about {
+    padding: 0 40px;
+
+    &__collapses {
+      width: 90%;           // toujours 90%
+      flex-direction: column; // une seule colonne
+      gap: 30px;
+      padding-top: 40px;
+
+      > * {
+        width: 100%;        // chaque Collapse sur toute la largeur
+      }
+    }
+  }
+}
+
+/* ===== PROPS pour Collapse ===== */
+  .desktop-24 {
+    @media screen and (min-width: $desktop-min-wide) {
+      font-size:24px;
+    }
+  }

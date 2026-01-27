@@ -1,0 +1,50 @@
+// Variables globales pour les couleurs
+$color-white: #fff;       // texte blanc
+$color-black: #000;       // fond noir
+
+.footer {
+  height: 209px;
+  background-color: $color-black;
+  color: $color-white;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+
+  &__logo {
+    width: 100px; // mobile first
+    margin-bottom: 20px;
+  }
+
+  p {
+    font-size: 16px; // mobile first
+  }
+
+  a {
+    color: $color-white;
+    text-decoration: underline;
+  }
+}
+
+/* ===== Desktop ===== */
+@media screen and (min-width: 768px) {
+  .footer {
+    height: 209px; // inchangé
+
+    &__logo {
+      width: 122px;
+      margin-bottom: 30px;
+    }
+
+    p {
+      font-size: 24px;
+    }
+
+    a {
+      cursor: pointer; // hover desktop
+    }
+  }
+}

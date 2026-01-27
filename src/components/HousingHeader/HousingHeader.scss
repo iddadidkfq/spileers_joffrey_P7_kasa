@@ -1,0 +1,16 @@
+@import '../../styles/variables.scss';
+
+.housing-header {
+    padding-top: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  @media screen and (min-width: $desktop-min-wide) {
+    flex-direction: row;
+    align-items: flex-start; // plus logique que center ici
+  }
+  
+}
+ 

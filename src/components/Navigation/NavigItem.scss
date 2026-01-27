@@ -1,0 +1,22 @@
+@import '../../styles/variables.scss';
+
+.navig-item {
+  color: $color-primary;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.navig-item--active {
+  text-decoration: underline;
+}
+
+/* ===== Desktop ===== */
+@media screen and (min-width: $desktop-min-wide) {
+  .navig-item {
+    font-size: 24px;
+  }
+
+  .navig-item--active:hover {
+    cursor: pointer;
+  }
+}
