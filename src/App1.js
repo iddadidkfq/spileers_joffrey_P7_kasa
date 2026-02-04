@@ -24,10 +24,14 @@ import NotFound from './pages/NotFound/NotFound';
  * - Distribuer les données aux pages via les props
  */
 function App() {
-	
+
+  // 1. UseState pour le n° de page courant
   const [page, setPage] = useState(1);
+
+  // 2. Chargement des logements et nb total de pages
   const { logements, totalPage } = ChargePage(page);
-	
+  
+	// 3. Définition des routes avec leur composant et leurs PROPS
   return (
     <BrowserRouter>
       <Layout>

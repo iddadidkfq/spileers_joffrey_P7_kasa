@@ -17,7 +17,7 @@ function Carousel({ pictures }) {
   const total = pictures.length;
 
   if (!pictures || total === 0) return null; // KISS : rien à afficher
-
+  //fonctions
   const prevImage = () => {
     setCurrentIndex((prev) => (prev - 1 + total) % total);  // %total est modulo total
   };
@@ -25,7 +25,7 @@ function Carousel({ pictures }) {
   const nextImage = () => {
     setCurrentIndex((prev) => (prev + 1) % total);
   };
-
+  //render
   return (
     <div className="carousel">
       {/* Image actuelle */}

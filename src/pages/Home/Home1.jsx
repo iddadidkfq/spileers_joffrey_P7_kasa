@@ -29,23 +29,24 @@ function Home({ logements, numPage, onSetPage, totalPage}) {
           />
         ))}
       </section>
-	  <div>
-		  <button
-			disabled={numPage === 1}
-			onClick={() => onSetPage(p => p - 1)}
-		  >
-			Précédent
-		  </button>
+      {/* Gestion de la pagination */}
+      <div>
+        <button
+          disabled={numPage === 1}
+          onClick={() => onSetPage(p => p - 1)}
+        >
+          Précédent
+        </button>
 
-		  <span>Page {numPage} / {totalPage}</span>
+        <span>Page {numPage} / {totalPage}</span>
 
-		  <button
-			disabled={numPage === totalPage}
-			onClick={() => onSetPage(p => p + 1)}
-		  >
-			Suivant
-		  </button>
-	  </div>
+        <button
+          disabled={numPage === totalPage}
+          onClick={() => onSetPage(p => p + 1)}
+        >
+          Suivant
+        </button>
+      </div>
     </main>
   );
 }

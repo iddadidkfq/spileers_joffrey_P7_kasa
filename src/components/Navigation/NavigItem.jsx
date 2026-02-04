@@ -13,6 +13,7 @@ import './NavigItem.scss';
  * - Déterminer s’il est actif ou inactif via l’URL
  */
 function NavigItem({ label, routingPath }) {
+  // récupération du link de la page courante
   const location = useLocation();
 
   // Le lien est inactif si le path correspond à l'URL courante
@@ -21,7 +22,7 @@ function NavigItem({ label, routingPath }) {
   // Cas lien inactif : texte simple
   if (isInactive) {
     return (
-      <span className="navig-item">
+      <span className="navig-item navig-item--underline">
         {label}
       </span>
     );
@@ -31,7 +32,7 @@ function NavigItem({ label, routingPath }) {
   return (
     <Link
       to={routingPath}
-      className="navig-item navig-item--active"
+      className="navig-item"
     >
       {label}
     </Link>

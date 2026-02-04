@@ -1,25 +1,26 @@
+// 1. Chargement du fichier JSON des logements
 import logements from "./data/logements.json";
 
 function ChargePage(numPage) {
+  // 2. pour nos tests, on fixe à 6 le nb de logements par page
   const parPage = 6;
 
+  // 3. Calcul du nombre de pages
   const totalEnregistrements = logements.length;
-  const totalPage = Math.ceil(totalEnregistrements / parPage);
+  const totalPage = Math.ceil(totalEnregistrements / parPage);  // arrondi supérieur
 
   // Sécurité : page invalide
   if (numPage < 1 || numPage > totalPage) {
     return {
-      numPage,
       logements: [],
       totalPage
     };
   }
-
+  // 4. Sélection des logements à retourner
   const start = (numPage - 1) * parPage;
   const end = start + parPage;
 
   return {
-    numPage,
     logements: logements.slice(start, end),
     totalPage
   };

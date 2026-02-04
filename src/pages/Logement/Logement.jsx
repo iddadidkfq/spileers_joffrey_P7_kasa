@@ -17,16 +17,17 @@ import './Logement.scss';
  * - Afficher HousingDetails si trouvé, sinon rediriger vers NotFound
  */
 function Logement({ logements }) {
-  const { id } = useParams();
+  // 1. récupération de l'id dans les paramètres de l'URL
+  const { id } = useParams();   
 
-  // Recherche du logement correspondant
+  // 2. Recherche du logement correspondant dans la PROPS
   const logement = logements.find((l) => l.id === id);
 
-  // Si pas trouvé, redirige vers NotFound
+  // 3a. Si pas trouvé, redirige vers NotFound
   if (!logement) {
     return <Navigate to="/NotFound" />;
   }
-
+  // 3b. affichage du logement
   return (
     <main className="logement-page">
       <Carousel pictures={logement.pictures} />
