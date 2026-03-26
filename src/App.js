@@ -12,7 +12,7 @@ import Logement from './pages/Logement/Logement';
 import About from './pages/About/About';
 import NotFound from './pages/NotFound/NotFound';
 
-// Données logements (import temporaire avant API)
+// 1. Données logements (import temporaire avant API)
 import logements from './data/logements.json';
 
 /**
@@ -26,7 +26,7 @@ import logements from './data/logements.json';
 function App() {
   return (
     <BrowserRouter>
-      <Layout>
+      <Layout>  
         <Routes>
           {/* Page Home : affiche la liste des logements */}
           <Route
@@ -43,8 +43,8 @@ function App() {
           {/* Page About */}
           <Route path="/about" element={<About />} />
 
-          {/* Page 404 */}
-          <Route path="*" element={<NotFound />} />
+          {/* Page 404  - toute autre route */}
+          <Route path="*" element={<NotFound />} />p
         </Routes>
       </Layout>
     </BrowserRouter>

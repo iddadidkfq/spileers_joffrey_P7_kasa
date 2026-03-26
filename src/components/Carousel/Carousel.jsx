@@ -13,19 +13,20 @@ import './Carousel.scss';
  * - Afficher compteur et flèches si plus d'une image
  */
 function Carousel({ pictures }) {
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(0);  // mémorisation image courante
   const total = pictures.length;
 
   if (!pictures || total === 0) return null; // KISS : rien à afficher
-  //fonctions
+  //fonctions appelées sur click précédent - suivant
   const prevImage = () => {
-    setCurrentIndex((prev) => (prev - 1 + total) % total);  // %total est modulo total
+    setCurrentIndex((current) => (current - 1 + total) % total);  // %total est modulo total
   };
 
   const nextImage = () => {
-    setCurrentIndex((prev) => (prev + 1) % total);
+    setCurrentIndex((current) => (current + 1) % total);
   };
-  //render
+
+  //render  
   return (
     <div className="carousel">
       {/* Image actuelle */}

@@ -27,7 +27,7 @@ function Logement({ logements }) {
   if (!logement) {
     return <Navigate to="/NotFound" />;
   }
-  // 3b. affichage du logement
+  // 3b. Si trouvé, affichage du logement
   return (
     <main className="logement-page">
       <Carousel pictures={logement.pictures} />

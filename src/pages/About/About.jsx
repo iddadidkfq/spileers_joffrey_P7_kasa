@@ -1,6 +1,9 @@
 import Collapse from '../../components/Collapse/Collapse';
+import Banner from '../../components/Banner/Banner';
+import image from './bandeau_about.png'
 import './About.scss';
-import bandeau from './bandeau_about.png';
+
+
 
 /**
  * Page About
@@ -12,16 +15,15 @@ import bandeau from './bandeau_about.png';
 function About() {
   return (
     <main className="about">
-      {/* Bandeau en haut de page */}
-      <img
-        src={bandeau}
-        alt="Bandeau About Kasa"
-        className="about__banner"
-      />
 
-      {/* Conteneur principal des collapses */}
+      <Banner        // 1. composant banner et ses PROPS  
+        picture={image}
+        classHeightDesktop='height223'
+      />    
+
+      {/* 2. Conteneur principal des collapses */}
       <section className="about__collapses">
-        <Collapse title="Fiabilité" classDesktop="desktop-24">
+        <Collapse title="Fiabilité" classDesktop="desktop-24">   {/* 3. les collapses avec leurs props */}
           <p>Les annonces postées sur Kasa garantissent une fiabilité totale. 
             Les photos sont conformes aux logements, et toutes 
             les informations sont régulièrement vérifiées  par nos équipes.

@@ -2,7 +2,7 @@
 
 .collapse {
   width: 100%;
-  margin-bottom: 20px;
+  margin-top: 20px;
 
   &__header {
     background-color: $color-primary; // bandeau orangé
@@ -13,7 +13,8 @@
     align-items: center;
 
     padding: 0px 15px;
-    border-radius: 10px; // tu peux mettre $border-radius si défini dans variables
+    border-radius: 5px; // tu peux mettre $border-radius si défini dans variables
+    height: 30px;
     cursor: pointer;
   }
 
@@ -46,6 +47,10 @@
   .collapse {
     &__arrow {
       font-size: 20px;
+    } 
+    &__header {
+      height: 47px;
     }
   }
+   
 }

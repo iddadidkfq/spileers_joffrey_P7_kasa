@@ -9,6 +9,7 @@ import arrow from './Vector.png';
  * Props :
  * - title : string → titre affiché dans le bandeau
  * - children : contenu à afficher / masquer
+ * - classDesktop : taille police
  */
 function Collapse({ title, classDesktop, children }) {
   // State local pour gérer l'ouverture / fermeture

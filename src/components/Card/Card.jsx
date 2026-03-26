@@ -12,20 +12,20 @@ import './Card.scss';
  * - Afficher le titre en surimpression
  * - Rediriger vers la page Logement au clic
  */
-function Card({ logement }) {
+function Card({ logement }) {   // 1. Un seul logement en props
   return (
-    <Link
-      to={"/logement/" + logement.id}  // modif ici pour envoyer logt inexistant
+    <Link   // 4. Dans un link pour le routage React...
+      to={"/logement/" + logement.id} // 5. vers page logement avec id comme param url
       className="card"
     >
-      {/* Image du logement */}
+      {/* 2. Image du logement */}
       <img
         src={logement.cover}
         alt={logement.title}
         className="card__image"
       />
 
-      {/* Titre en surimpression */}
+      {/* 3. Titre en surimpression */}
       <h2 className="card__title">
         {logement.title}
       </h2>

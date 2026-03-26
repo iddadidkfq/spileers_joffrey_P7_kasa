@@ -1,3 +1,4 @@
+@import '../../styles/variables.scss';
 
 .layout {
   min-height: 100vh;  // prend toute la hauteur de l’écran
@@ -9,4 +10,10 @@
   flex: 1;                 // prend tout l’espace disponible
   display: flex;           // permet aux pages internes d’utiliser flex
   flex-direction: column;
+}
+
+@media screen and (min-width: $desktop-min-wide) {
+  .layout__content{
+    margin : 0px 100px 0px 100px;
+  }
 }

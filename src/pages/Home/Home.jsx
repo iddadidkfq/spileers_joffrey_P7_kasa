@@ -1,5 +1,6 @@
 import Card from '../../components/Card/Card';
-import bandeau from './bandeau.png';
+import Banner from '../../components/Banner/Banner';
+import image from './bandeau.png'
 import './Home.scss';
 
 /**
@@ -12,20 +13,20 @@ import './Home.scss';
  * - Afficher la liste des logements
  * - Déléguer l'affichage individuel à Card
  */
-function Home({ logements }) {
+function Home({ logements }) {    // 1. props: tous les logements
   return (
     <main className="home">
-      {/* Conteneur pour le bandeau avec texte en superposition */}
-      <div className="home__bandeau-container">
-        <img className="home__bandeau" src={bandeau} alt="bandeau" />
-        <div className="home__bandeau-text">Chez vous, partout et ailleurs</div>
-      </div>
+ 
+      <Banner        // 2. composant banner et ses PROPS  
+        title='Chez vous, partout et ailleurs'
+        picture={image}
+      />
 
-      {/* Boucle sur les logements */}
+      {/* 3. Boucle sur les logements */}
       <section className="home__grid">
         {logements.map((logement) => (
-          <Card        // composant Card et ses PROPS  
-            key={logement.id} 
+          <Card        // 4. Pour chaque objet logement, composant Card et ses PROPS  
+            key={logement.id} // 5. key pour unicité
             logement={logement}
           />
         ))}

@@ -10,7 +10,7 @@
   align-items: center;
 
   // Padding général pour espacer logo et nav du bord de l'écran
-  padding: 20px;
+  padding: 18px;
 
   // Pour que padding soit inclus dans la largeur totale
   box-sizing: border-box;
@@ -38,7 +38,7 @@
 /* ===== Desktop ===== */
 @media screen and (min-width: $desktop-min-wide) {
   .header {
-    padding: 40px; // plus d'espace sur desktop
+    padding: 42px 100px 42px 100px; // pas d'espace sur desktop
   }
 
   .header__logo {
